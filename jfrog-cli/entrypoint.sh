@@ -2,11 +2,11 @@
 
 set -e
 
-if [ -z ${SERVERTOKEN+x} ]; then
+if [ -z ${SERVERKEY+x} ]; then
     echo "No Server Token Found, check secret...";
 else
     echo "Authentication using Server ";
-        sh -c "jf config import $SERVERTOKEN"
+        sh -c "jf config import $SERVERKEY"
         sh -c "jf rt ping"
 fi
 
