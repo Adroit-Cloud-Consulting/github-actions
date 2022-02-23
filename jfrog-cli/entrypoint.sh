@@ -13,7 +13,7 @@ fi
 for cmd in "$@"; do
     echo "Running '$cmd'..."
     if [ "$cmd" != "-v" ]; then
-        if sh -c "jfrog $cmd"; then
+        if sh -c "$cmd"; then
             # no op
             echo "Successfully ran '$cmd'"
         else
