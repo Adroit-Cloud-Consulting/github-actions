@@ -6,8 +6,8 @@ if [ -z ${SERVERKEY+x} ]; then
     echo "No Server Token Found, check secret...";
 else
     echo "Authentication using Server ";
-        sh -c "jf config import $SERVERKEY"
-        sh -c "jf rt ping"
+        sh -c "jfrog config import $SERVERKEY"
+        sh -c "jfrog rt ping"
 fi
 
 for cmd in "$@"; do
